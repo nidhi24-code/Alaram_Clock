@@ -1,0 +1,120 @@
+
+/* Resetting default margin, padding, and box-sizing; Setting font-family for the entire document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the body and main container elements */
+body, .wrapper, .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #676a6d; /* Background color for the body */
+}
+
+/* Styling for the main wrapper/container */
+.wrapper {
+  width: 440px;
+  padding: 30px 30px 38px;
+  background: #ccc6c6; /* Background color for the wrapper */
+  border-radius: 60px;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+}
+/* Styling for the main heading within the wrapper */
+.wrapper h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 30px 0;
+}
+
+/* Styling for the content section within the wrapper */
+.wrapper .content {
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+/* Styling for a disabled state of the content, such as when an alarm is set */
+.content.disable {
+  cursor: no-drop;
+}
+
+
+/* Styling for each column within the content section */
+.content .column {
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf; /* Border and border color for the columns */
+  width: calc(100% / 3 - 5px); /* Calculating width for three columns with spacing */
+}
+
+/* Styling for a disabled state of a column */
+.content.disable .column {
+  opacity: 0.6; /* Reducing opacity for a disabled column */
+  pointer-events: none; /* Disabling pointer events for a disabled column */
+}
+
+/* Styling for the dropdown select elements within the columns */
+.column select {
+  width: 100%;
+  height: 53px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 19px;
+}
+
+/* Styling for the button within the wrapper */
+.wrapper button {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff; /* Text color for the button */
+  cursor: pointer;
+  font-size: 20px;
+  padding: 17px 0;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #1b2027; /* Background color for the button */
+}
+
+/* Styling for the alarm list */
+.alarms {
+    width: 90%;
+    margin-top: 30px;
+  }
+  
+  /* Styling for each alarm item in the list */
+  #alarmList li {
+    list-style-type: none;
+    background-color: #fff; /* Background color for each alarm item */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 30px;
+    display: flex-grow ;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Styling for the delete button within each alarm item */
+  #alarmList li button {
+    width: 25% ;
+    background-color: #261e1d; /* Background color for the delete button */
+    color: #fff; /* Text color for the delete button */
+    border: 20px;
+    padding: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 140px;
+    
+  }
+  
